@@ -1,0 +1,136 @@
+
+bacteria.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+B2
+  rotate: false
+  xy: 1, 541
+  size: 267, 268
+  orig: 267, 268
+  offset: 0, 0
+  index: -1
+B9
+  rotate: false
+  xy: 1, 271
+  size: 267, 268
+  orig: 267, 268
+  offset: 0, 0
+  index: -1
+B8
+  rotate: false
+  xy: 270, 541
+  size: 267, 268
+  orig: 267, 268
+  offset: 0, 0
+  index: -1
+B7
+  rotate: false
+  xy: 1, 1
+  size: 267, 268
+  orig: 267, 268
+  offset: 0, 0
+  index: -1
+B5B
+  rotate: false
+  xy: 270, 271
+  size: 267, 268
+  orig: 267, 268
+  offset: 0, 0
+  index: -1
+B6
+  rotate: false
+  xy: 539, 541
+  size: 267, 268
+  orig: 267, 268
+  offset: 0, 0
+  index: -1
+B11
+  rotate: false
+  xy: 270, 1
+  size: 267, 268
+  orig: 267, 268
+  offset: 0, 0
+  index: -1
+B15
+  rotate: false
+  xy: 539, 271
+  size: 267, 268
+  orig: 267, 268
+  offset: 0, 0
+  index: -1
+B14
+  rotate: false
+  xy: 539, 1
+  size: 267, 268
+  orig: 267, 268
+  offset: 0, 0
+  index: -1
+
+bacteria2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+B5
+  rotate: false
+  xy: 1, 541
+  size: 267, 268
+  orig: 267, 268
+  offset: 0, 0
+  index: -1
+B6B
+  rotate: false
+  xy: 1, 271
+  size: 267, 268
+  orig: 267, 268
+  offset: 0, 0
+  index: -1
+B16
+  rotate: false
+  xy: 270, 541
+  size: 267, 268
+  orig: 267, 268
+  offset: 0, 0
+  index: -1
+B3
+  rotate: false
+  xy: 1, 1
+  size: 267, 268
+  orig: 267, 268
+  offset: 0, 0
+  index: -1
+B10
+  rotate: false
+  xy: 270, 271
+  size: 267, 268
+  orig: 267, 268
+  offset: 0, 0
+  index: -1
+B12
+  rotate: false
+  xy: 539, 541
+  size: 267, 268
+  orig: 267, 268
+  offset: 0, 0
+  index: -1
+B4
+  rotate: false
+  xy: 270, 1
+  size: 267, 268
+  orig: 267, 268
+  offset: 0, 0
+  index: -1
+B1
+  rotate: false
+  xy: 539, 271
+  size: 267, 268
+  orig: 267, 268
+  offset: 0, 0
+  index: -1
+B13
+  rotate: false
+  xy: 539, 1
+  size: 267, 268
+  orig: 267, 268
+  offset: 0, 0
+  index: -1

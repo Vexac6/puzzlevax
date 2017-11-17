@@ -1,0 +1,252 @@
+{
+com.badlogic.gdx.graphics.g2d.BitmapFont: {
+	round: {
+		file: font-export.fnt
+	}
+	round-big: {
+		file: font-big-export.fnt
+	}
+}
+com.badlogic.gdx.graphics.Color: {
+	Black: {
+		r: 0
+		g: 0
+		b: 0
+		a: 1
+	}
+	Blood: {
+		r: 0.5686275
+		g: 0.05882353
+		b: 0.05733335
+		a: 1
+	}
+	DarkGrass: {
+		r: 0.16679454
+		g: 0.38666666
+		b: 0.14306666
+		a: 1
+	}
+	DarkGray: {
+		r: 0.32
+		g: 0.32
+		b: 0.32
+		a: 1
+	}
+	Grass: {
+		r: 0.28340507
+		g: 0.55333334
+		b: 0.25822225
+		a: 1
+	}
+	LightGray: {
+		r: 0.81
+		g: 0.81
+		b: 0.81
+		a: 1
+	}
+	MediumGray: {
+		r: 0.4670222
+		g: 0.4677217
+		b: 0.47333333
+		a: 1
+	}
+	NightBlue: {
+		r: 0.176
+		g: 0.17964384
+		b: 0.29333332
+		a: 1
+	}
+	Scarlet: {
+		r: 0.78
+		g: 0.16119999
+		b: 0.16119999
+		a: 1
+	}
+	SkyBlue: {
+		r: 0.8284668
+		g: 0.8776882
+		b: 0.96333337
+		a: 1
+	}
+	White: {
+		r: 1
+		g: 1
+		b: 1
+		a: 1
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle: {
+	default: {
+		up: buttonBase
+		down: buttonBase_pressed
+	}
+	back: {
+		up: back
+		down: back_pressed
+	}
+	tutorial: {
+		up: tutorial
+		down: tutorial_pressed
+	}
+	progress: {
+		up: progress
+		down: progress_pressed
+	}
+	refresh: {
+		up: Refresh
+		down: Refresh_pressed
+	}
+	moveBack: {
+		up: moveBack
+		down: moveBack_pressed
+	}
+	education: {
+		up: education
+		down: education_pressed
+	}
+	settings: {
+		up: settings
+		down: settings_pressed
+	}
+	left: {
+		up: left-arrow
+		down: left-arrow-down
+	}
+	right: {
+		up: right-arrow
+		down: right-arrow-down
+	}
+	home: {
+		up: home
+		down: home_pressed
+	}
+	empty: {
+		up: void
+	}
+	up: {
+		up: up
+		down: up_pressed
+	}
+	down: {
+		up: down
+		down: down_pressed
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Label$LabelStyle: {
+	default: {
+		font: round
+		fontColor: NightBlue
+	}
+	big: {
+		font: round-big
+		fontColor: Black
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.List$ListStyle: {
+	default: {
+		font: round
+		fontColorSelected: SkyBlue
+		fontColorUnselected: NightBlue
+		selection: panel
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.ProgressBar$ProgressBarStyle: {
+	default-horizontal: {
+		background: progressBar
+		knob: Knob
+		knobAfter: knobAfter
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.ScrollPane$ScrollPaneStyle: {
+	default: {
+		background: panel
+		vScroll: scrollBack
+		vScrollKnob: scrollKnob
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.SelectBox$SelectBoxStyle: {
+	default: {
+		font: round
+		fontColor: NightBlue
+		scrollStyle: default
+		listStyle: default
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Slider$SliderStyle: {
+	default-horizontal: {
+		background: slider-back
+		knob: slider-knob
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.TextButton$TextButtonStyle: {
+	default: {
+		font: round
+		fontColor: NightBlue
+		downFontColor: White
+		up: tb2
+		down: tb2-pressed
+	}
+	levelButton: {
+		font: round
+		fontColor: MediumGray
+		downFontColor: DarkGray
+		up: levelButton
+		down: levelButton_pressed
+	}
+	levelClear: {
+		font: round
+		fontColor: Grass
+		downFontColor: DarkGrass
+		up: levelClear
+		down: levelClear_pressed
+	}
+	levelDisabled: {
+		font: round
+		fontColor: Scarlet
+		downFontColor: Blood
+		up: levelDisabled
+		down: levelDisabled_pressed
+	}
+	displayLevel: {
+		font: round-big
+		fontColor: Black
+		up: bacteria
+	}
+	displayPuzzle: {
+		font: round-big
+		fontColor: Black
+		up: puzzle
+	}
+	big: {
+		font: round-big
+		fontColor: White
+		downFontColor: NightBlue
+		up: textButton
+		down: textButton-down
+	}
+	cool: {
+		font: round
+		fontColor: Black
+		up: txtButton
+		down: txtButton-pressed
+	}
+	snapshot: {
+		font: round-big
+		fontColor: Black
+		up: snapshot_base
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.TextTooltip$TextTooltipStyle: {
+	default: {
+		label: default
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Window$WindowStyle: {
+	default: {
+		background: window
+		titleFont: round
+		titleFontColor: SkyBlue
+		stageBackground: windowBG
+	}
+}
+}
