@@ -51,7 +51,7 @@ public class MainMenuScreen extends AbstractScreen {
 
         visibile = 0;
         for (int i=0; i<snapshot.length; i++) {
-            final int index = i;
+            final PuzzleVax.Puzzle_T tipo = PuzzleVax.Puzzle_T.values()[i];
             snapshot[i] = new TextButton(PuzzleVax.Puzzle_T.values()[i].name(), skin, "snapshot");
             snapshot[i].setBounds(V_WIDTH/8, V_HEIGHT/2 - P_SIZE/2, P_SIZE, P_SIZE);
             if (i != visibile) snapshot[i].setVisible(false);
@@ -65,7 +65,7 @@ public class MainMenuScreen extends AbstractScreen {
                     float w = stack.getWidth();
                     float h = stack.getHeight();
                     if (x >= bx && x<= bx+w && y >= by && y <= by+h)
-                        ScreenManager.getInstance().showScreen(LEVELS, index);
+                        ScreenManager.getInstance().showScreen(LEVELS, tipo);
                 }});
         }
 

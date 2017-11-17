@@ -72,10 +72,7 @@ public class Flow extends Puzzle {
     }
 
     @Override
-    public void initialize(Queue<String> tiles, String[] coords) {
-
-        for (String coord : coords)
-            posizioni.add(Integer.parseInt(coord));
+    public void initialize(Queue<String> tiles) {
 
         for (String key:  tiles) {
             final Image img = new Image(PuzzleVax.SKIN, tipo + "_" + key);

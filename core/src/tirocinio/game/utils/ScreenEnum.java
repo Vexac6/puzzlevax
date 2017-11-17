@@ -15,13 +15,13 @@ public enum ScreenEnum {
 
     LEVELS {
         public AbstractScreen getScreen(Game app, Object... params) {
-            return new LevelScreen((PuzzleVax)app,(Integer)params[0]);
+            return new LevelScreen((PuzzleVax)app,(PuzzleVax.Puzzle_T) params[0]);
         }
     },
 
     GAME {
         public AbstractScreen getScreen(Game app, Object... params) {
-            return new GameScreen((PuzzleVax)app,(Integer)params[0], (Integer)params[1]);
+            return new GameScreen((PuzzleVax)app,(PuzzleVax.Puzzle_T) params[0], (Integer)params[1]);
         }
     },
 
@@ -37,7 +37,7 @@ public enum ScreenEnum {
             return new ProgressScreen((PuzzleVax)app);
         }
     };
-/**
+    /**
     LOADING {
     public Screen getScreen(Object... params) {
     return new LoadingScreen((PuzzleVax) params[0]);

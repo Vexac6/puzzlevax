@@ -5,6 +5,7 @@ import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Touchable;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.utils.IntMap;
 import com.badlogic.gdx.utils.Json;
@@ -51,10 +52,11 @@ public abstract class Puzzle {
     protected HashMap<String, Integer> map;
     protected VirtualTile[][] board;
 
+    protected Skin skin;
 
     public abstract void createMap();
     public abstract String createTutorial();
-    public abstract void initialize(Queue<String> tiles, String[] coords);
+    public abstract void initialize(Queue<String> tiles);
     public boolean singleTouch;
 
     public Table getTable() {return table;}
@@ -69,19 +71,18 @@ public abstract class Puzzle {
         blocchi = new LinkedList<Image>();
         tiles = new LinkedList<String>(Arrays.asList(tokens[1].split("(?!^)")));
         posizioni = new LinkedList<Integer>();
-        String[] coords = tokens[2].split("/");
-        initialize(tiles, coords);
+        for (String coord : tokens[2].split("/"))
+            posizioni.add(Integer.parseInt(coord));
+
+        initialize(tiles);
     }
 
     public void createBoard() {
         table = new Table();
         board = new VirtualTile[levelSize][levelSize];
-        int boardSize = calcSize(levelSize, AbstractScreen.P_SIZE);
-        table.setBounds(
-                (AbstractScreen.V_WIDTH-boardSize)/2,
-                (AbstractScreen.V_HEIGHT-boardSize)/2,
-                boardSize,
-                boardSize);
+        //int boardSize = calcSize(levelSize, AbstractScreen.P_SIZE);
+        //table.setBounds((AbstractScreen.V_WIDTH-boardSize)/2,(AbstractScreen.V_HEIGHT-boardSize)/2,boardSize,boardSize);
+        //table.setSize(boardSize,boardSize);
         table.setTouchable(Touchable.enabled);
 
         for (int i=0; i<levelSize; i++) {

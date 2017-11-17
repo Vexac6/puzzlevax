@@ -6,40 +6,43 @@ import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 
 import tirocinio.game.PuzzleVax;
-import tirocinio.game.gameManager.Board;
 import tirocinio.game.gameManager.Puzzle;
+import tirocinio.game.gameManager.Road;
 import tirocinio.game.utils.ScreenEnum;
 import tirocinio.game.utils.ScreenManager;
 
 public class GameScreen extends AbstractScreen {
 
     private HUD up,down;
-    private Button home, tutorial, moveBack, refresh;
-    private TextButton displayPuzzle, displayLevel;
+    private Button home, tutorial, moveBack, refresh, displayPuzzle, displayLevel;
+    //private TextButton displayPuzzle, displayLevel;
     private Puzzle puzzle;
-    private Board board;
 
-    public GameScreen (PuzzleVax app, int id, int lv) {
+    public GameScreen (PuzzleVax app, PuzzleVax.Puzzle_T tipo, int lv) {
         super(app);
         home = new Button(skin, "home");
         tutorial = new Button(skin, "tutorial");
         moveBack = new Button(skin, "moveBack");
         refresh = new Button(skin, "refresh");
+        /**
         displayPuzzle = new TextButton(PuzzleVax.Puzzle_T.values()[id].name(),skin,"displayPuzzle");
         displayLevel = new TextButton(Integer.toString(lv+1),skin,"displayLevel");
+         **/
+        displayPuzzle = new Button(skin, "education"); //TODO
+        displayLevel = new Button(skin, "settings"); //TODO
         up = new HUD(skin, home, displayPuzzle, tutorial);
         down = new HUD(skin, moveBack, displayLevel, refresh);
 
-        //table = new Board();
-        //puzzle = new Puzzle();
+        initPuzzle(tipo,lv);
     }
 
     @Override
     public void buildStage() {
+
         table.setFillParent(true);
         table.add(up).expandX().fill();
         table.row();
-        table.add().expand().fill();
+        table.add(puzzle.getTable()).expand();
         table.row();
         table.add(down).expandX().fill();
 
@@ -95,12 +98,25 @@ public class GameScreen extends AbstractScreen {
                 }
             }});
 
-        board.setFillParent(true);
-
         this.addActor(table);
-        this.addActor(board);
     }
 
     @Override
     public void dispose() { super.dispose();}
+
+    private void initPuzzle(PuzzleVax.Puzzle_T tipo, int lv) { //TODO
+        switch (tipo) {
+            case FLOW: {}//puzzle = new Flow(lv, skin);
+            case LOOP: {}//puzzle = new Loop(lv, skin);
+            case MAZE: {}//puzzle = new Maze(lv, skin);
+            case ROAD: puzzle = new Road(lv, skin);
+            case BRIDGES: {}//puzzle = new Bridges(lv, skin);
+            case PIPE: {}//puzzle = new Pipe(lv, skin);
+            case SHIKAKU: {}//puzzle = new Shikaku(lv, skin);
+            case UNLOCK: {}// puzzle = new Unlock(lv, skin);
+            case CROVER: {}//puzzle = new Crover(lv, skin);
+            case SUMMIT: {}//puzzle = new Summit(lv, skin);
+            case BONUS: {}// puzzle = new Bonus(lv, skin);
+        }
+    }
 }

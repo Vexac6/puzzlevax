@@ -1,18 +1,18 @@
 package tirocinio.game.utils;
 
-public class Connettore {
+public class Polo {
 
     private boolean present;
     private boolean connected;
 
-    public Connettore() {
+    public Polo() {
         present = false;
         connected = false;
     }
 
     public void set () {present = true;}
-    public void connect () {if (present) connected = true;}
-    public void disconnect () {if (present) connected = false;}
+    public void connect () {connected = true;}
+    public void disconnect () {connected = false;}
 
     public boolean isPresent() {return present;}
 

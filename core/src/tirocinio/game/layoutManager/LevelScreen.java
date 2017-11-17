@@ -20,16 +20,16 @@ public class LevelScreen extends AbstractScreen {
     private Table tab;
     private TextButton[] livelli;
     private Label titolo;
-    private final int puzzleID;
+    private final PuzzleVax.Puzzle_T tipo;
 
-    public LevelScreen (PuzzleVax app, int id) {
+    public LevelScreen (PuzzleVax app, PuzzleVax.Puzzle_T tipo) {
         super(app);
-        puzzleID = id;
+        this.tipo = tipo;
         back = new Button(skin, "back");
         tutorial = new Button(skin, "tutorial");
         up = new HUD(skin, back, tutorial);
         tab = new Table();
-        titolo = new Label(PuzzleVax.Puzzle_T.values()[puzzleID].name(), skin, "big");
+        titolo = new Label(tipo.name(), skin, "big");
         livelli = new TextButton[50];
         scrollPane = new ScrollPane(tab, skin);
     }
@@ -50,7 +50,7 @@ public class LevelScreen extends AbstractScreen {
                     float w = livelli[index].getWidth();
                     float h = livelli[index].getHeight();
                     if (x >= bx && x<= bx+w && y >= by && y <= by+h)
-                        ScreenManager.getInstance().showScreen(ScreenEnum.GAME,puzzleID,index);
+                        ScreenManager.getInstance().showScreen(ScreenEnum.GAME,tipo,index);
                 }});
             if ((i+1)%5 == 0) {
                 tab.add(livelli[i-4]).padLeft(11).padRight(2);

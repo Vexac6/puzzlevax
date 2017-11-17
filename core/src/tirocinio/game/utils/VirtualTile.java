@@ -4,25 +4,25 @@ import tirocinio.game.PuzzleVax;
 
 public class VirtualTile {
 
-    private Connettore N,E,S,W;
+    private Polo N,E,S,W;
     private int id;
     private String tipo;
 
     public VirtualTile(PuzzleVax.Puzzle_T puz, int id) {
         this.id = id;
-        N = new Connettore();
-        E = new Connettore();
-        S = new Connettore();
-        W = new Connettore();
+        N = new Polo();
+        E = new Polo();
+        S = new Polo();
+        W = new Polo();
         initialize(puz);
     }
 
     public VirtualTile(PuzzleVax.Puzzle_T puz, String tipo) {
         this.tipo = tipo;
-        N = new Connettore();
-        E = new Connettore();
-        S = new Connettore();
-        W = new Connettore();
+        N = new Polo();
+        E = new Polo();
+        S = new Polo();
+        W = new Polo();
         initialize(puz, tipo);
     }
 
@@ -41,11 +41,19 @@ public class VirtualTile {
 
     private void initialize(PuzzleVax.Puzzle_T puz, String tipo) {    }
 
-    public Connettore north() {return N;}
-    public Connettore east() {return E;}
-    public Connettore south() {return S;}
-    public Connettore west() {return W;}
+    public int polesConnected() {
+        int poles = 0;
+        if (north().isConnected()) poles++;
+        if (east().isConnected()) poles++;
+        if (south().isConnected()) poles++;
+        if (west().isConnected()) poles++;
+        return poles;
+    }
 
+    public Polo north() {return N;}
+    public Polo east() {return E;}
+    public Polo south() {return S;}
+    public Polo west() {return W;}
     public int getId() {return id;}
     public String getTipo() {return tipo;}
 }
